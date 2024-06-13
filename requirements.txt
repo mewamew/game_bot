@@ -1,0 +1,15 @@
+torch==2.3.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+torchvision
+torchaudio
+TTS
+simpleaudio
+openai-whisper
+pyaudio
+webrtcvad
+google-generativeai
+pyautogui
+opencv-python-headless
+numpy
+pygetwindow
+librosa
+silero-vad

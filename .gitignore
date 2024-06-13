@@ -1,0 +1,12 @@
+__pycache__/
+output_videos/
+output.mp4
+output.wav
+output.mp3
+tmp.wav
+merged_output.mp4
+node_modules
+package-lock.json
+package.json
+
+
