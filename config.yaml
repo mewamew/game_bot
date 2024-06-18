@@ -1,0 +1,3 @@
+GENAI_API_KEY: "YOUR_API_KEY"
+TTS_MODE: "local" # Options: online, local
+LISTEN_WINDOW: "Minecraft"
