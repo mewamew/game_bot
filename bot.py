@@ -3,9 +3,12 @@ import os
 import time
 import sys
 import json
-from log import *
 
-genai.configure(api_key=os.getenv("GENAI_API_KEY"))
+from log import *
+import config
+
+api_key = os.getenv("GENAI_API_KEY") or config.GENAI_API_KEY
+genai.configure(api_key=api_key)
 
 class McBot:
     def __init__(self):
