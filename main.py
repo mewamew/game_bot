@@ -1,17 +1,21 @@
-from bot import McBot
+# Third-party libs
 from speech_detector import SpeechDetector
 from tts_service import CreateTtsService
 from screen_recorder import ScreenRecorder
 import shutil
 import os
 import subprocess
-from log import *
 from flask import Flask, request, jsonify
 import logging
 import requests 
 import sys
 import argparse
 import pygetwindow as gw
+
+# First-party libs
+from log import *
+from bot import McBot
+import config
 
 DEFAULT_WINDOW = "Minecraft" # Default to play Minecraft
 DEFAULT_TTS_MODE = "local"  # Default TTS mode
@@ -37,9 +41,10 @@ if __name__ == "__main__":
     if args.list_windows:
         list_windows()
         sys.exit(0)
-    
-    wait_for_window = args.window
-    tts_mode = args.tts
+
+    wait_for_window = args.window or config.GENAI_API_KEY
+    tts_mode = args.tts or config.TTS_MODE
+
     
     # Environment cleanup
     # Delete the output_videos folder
